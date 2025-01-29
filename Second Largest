@@ -62,29 +62,31 @@ Alright, let me explain this super simple, like you’re 5! Imagine you have a b
 
 ---
 
-### **The Problem**  
-We need to:
-1. Find the biggest number (let’s call it "Big Guy").  
-2. Then, find the second biggest number ("Runner-Up").  
+Alright, let me explain this super simple, like you’re 5! Imagine you have a box of toy numbers, and you want to find the biggest toy and the second biggest toy without needing to organize the whole box (no sorting).
 
-### **The Plan (Optimized Approach)**  
+The Problem
+
+
+We need to:
+
+Find the biggest number (let’s call it "Big Guy").
+Then, find the second biggest number ("Runner-Up").
+The Plan (Optimized Approach)
 Here’s how we’ll play:
 
-1. Look at each toy (number) in the box **one by one**.  
-2. Keep two spots in your head:  
-   - One for the **Biggest Toy (largest)** you’ve seen.  
-   - Another for the **Second Biggest Toy (secondLargest)**.  
-3. As you check each toy:
-   - If it’s bigger than your Biggest Toy, move the Biggest Toy to the Runner-Up spot and update the Biggest Toy.  
-   - If it’s smaller than the Biggest but bigger than the Runner-Up, update the Runner-Up.  
+Look at each toy (number) in the box one by one.
+Keep two spots in your head:
+One for the Biggest Toy (largest) you’ve seen.
+Another for the Second Biggest Toy (secondLargest).
+As you check each toy:
+If it’s bigger than your Biggest Toy, move the Biggest Toy to the Runner-Up spot and update the Biggest Toy.
+If it’s smaller than the Biggest but bigger than the Runner-Up, update the Runner-Up.
+At the end, your Runner-Up will hold the second biggest number!
 
-At the end, your Runner-Up will hold the **second biggest number**!  
-
----
-
-### **The Code (Simple and Optimized):**
+The Code (Simple and Optimized):
 Here’s the same logic in Java:
-```java
+
+
 class Solution {
     public int getSecondLargest(int[] arr) {
         int largest = Integer.MIN_VALUE; // Think: this is the smallest toy ever
@@ -102,29 +104,22 @@ class Solution {
         return (secondLargest == Integer.MIN_VALUE) ? -1 : secondLargest; // If no Runner-Up exists, return -1
     }
 }
-```
 
----
+Step-by-Step Example (Toys: [12, 35, 1, 10, 34, 1])
+Start with:
+largest = Integer.MIN_VALUE (Biggest Toy is empty),
+secondLargest = Integer.MIN_VALUE (Runner-Up is also empty).
 
-### **Step-by-Step Example (Toys: [12, 35, 1, 10, 34, 1])**
-1. Start with:  
-   `largest = Integer.MIN_VALUE` (Biggest Toy is empty),  
-   `secondLargest = Integer.MIN_VALUE` (Runner-Up is also empty).
+Go through each toy (number):
 
-2. Go through each toy (number):  
-   - **12:** Biggest = 12, Runner-Up = empty.  
-   - **35:** Biggest = 35, Runner-Up = 12.  
-   - **1:** Nothing changes, too small.  
-   - **10:** Nothing changes, smaller than Runner-Up.  
-   - **34:** Biggest = 35, Runner-Up = 34 (because it’s smaller than Biggest but bigger than the current Runner-Up).  
-   - **1:** Nothing changes, too small.  
+12: Biggest = 12, Runner-Up = empty.
+35: Biggest = 35, Runner-Up = 12.
+1: Nothing changes, too small.
+10: Nothing changes, smaller than Runner-Up.
+34: Biggest = 35, Runner-Up = 34 (because it’s smaller than Biggest but bigger than the current Runner-Up).
+1: Nothing changes, too small.
+Result: Biggest = 35, Runner-Up = 34. 🎉
 
-3. Result: Biggest = 35, Runner-Up = 34. 🎉
-
----
-
-### **Why This Is Better**  
-1. **No Sorting** – Sorting is like lining up all your toys from smallest to biggest, but here we only care about the top two.  
-2. **Fast** – It checks the box just **once** (O(n))!  
-
-Does this make sense now? 😊
+Why This Is Better
+No Sorting – Sorting is like lining up all your toys from smallest to biggest, but here we only care about the top two.
+Fast – It checks the box just once (O(n))!
