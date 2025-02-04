@@ -73,6 +73,16 @@ class Solution {
     }
 }
 
+Time Complexity:
+=================
+
+O(n) → The loop iterates through arr once.
+
+Space Complexity:
+=================
+
+O(1) → Only a few variables are used.
+
 
 Approach 2:
 ==============
@@ -95,7 +105,18 @@ class Solution {
     }
 }
 
-Approach 3:
+Time Complexity:
+=================
+
+O(n) → Both insertions and lookups are 
+O(1), making this efficient.
+
+Space Complexity:
+==================
+
+O(n) → The HashSet stores all n-1 elements.
+
+Approach 3:  (BEST APPROACH)
 =============
 
 Key XOR Properties
@@ -138,3 +159,12 @@ class Solution {
         return xor;
     }
 }
+
+Time Complexity:
+==================
+
+O(n) → Two passes over the array.
+Space Complexity:
+===================
+
+O(1) → Only a single integer variable is used.
