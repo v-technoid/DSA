@@ -21,6 +21,7 @@ Constraints:
 
 
 My solution:
+===============
 
 class Solution {
     public int getSecondLargest(int[] arr) {
@@ -57,6 +58,7 @@ O(nlogn)
 
 
 Optimised Approach:
+========================
 
 Alright, let me explain this super simple, like you’re 5! Imagine you have a box of toy numbers, and you want to find the **biggest toy** and the **second biggest toy** without needing to organize the whole box (no sorting).
 
